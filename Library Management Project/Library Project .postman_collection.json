@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "87b70a58-acbe-40e5-ae8a-6f0d61429d99",
+		"name": "Library Project ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25472599"
+	},
+	"item": [
+		{
+			"name": "Get All Libraries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/library/get-all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"library",
+						"get-all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Library",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"name\": \"NewDnyanganga\",\r\n        \"address\": \"T-point S-kherda\",\r\n        \"number\": \"8459281670\",\r\n        \"facilities\": \"Big place-AC-affordable\",\r\n        \"monthlyFees\": 500\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/library/add-library",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"library",
+						"add-library"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Library",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"name\": \"NewDnyanganga\",\r\n        \"address\": \"T-point S-kherda\",\r\n        \"number\": \"8459281670\",\r\n        \"facilities\": \"Big place-AC-affordable\",\r\n        \"monthlyFees\": 500\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/library/update-library",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"library",
+						"update-library"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Library information with name param",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/library/get-library-information?name=Dnyanganga",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"library",
+						"get-library-information"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Dnyanganga"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Library With Pathvariable ",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/library/delete-library/Dnyanganga",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"library",
+						"delete-library",
+						"Dnyanganga"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
